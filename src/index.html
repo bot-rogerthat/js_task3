@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/Insurer.js"></script>
+    <script src="scripts/savingService.js"></script>
+    <script src="scripts/moduleLS.js"></script>
+</head>
+<body onload="savingService.loadTable()">
+<header>
+    <h1>Форма ввода полиса страхования</h1>
+</header>
+<form>
+    <div>
+        <label for="insuranceType">Вид страхования:</label>
+        <select id="insuranceType">
+            <option value="КАСКО">КАСКО</option>
+            <option value="ОСАГО">ОСАГО</option>
+            <option value="ДАГО">ДАГО</option>
+        </select>
+    </div>
+    <div>
+        <label for="policyNumber">Номер полиса:</label>
+        <input id="policyNumber"/>
+    </div>
+    <div>
+        <label for="name">Страхователь:</label>
+        <input id="name"/>
+    </div>
+    <div>
+        <label for="dataPicker">Дата продажи:</label>
+        <input id="dataPicker" type="date"/>
+    </div>
+    <div>
+        <label for="premium">Страховая премия:</label>
+        <input id="premium" required value="0"/>
+    </div>
+
+    <div>
+        <label for="discount">Скидка:</label>
+        <input id="discount" required value="0"/>
+    </div>
+    <span>
+         <input type="button" value="Сохранить" onclick="savingService.register()">
+         <input type="button" value="Удалить все записи" onclick="savingService.deleteAll()">
+    </span>
+</form>
+
+<table id="regTable">
+    <tr>
+        <th>id</th>
+        <th>Вид страхования</th>
+        <th>Номер полиса</th>
+        <th>Страхователь</th>
+        <th>Дата продажи</th>
+        <th>Страховая премия</th>
+        <th>Скидка</th>
+    </tr>
+</table>
+</body>
+
+</html>

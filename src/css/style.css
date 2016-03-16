@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+
+form {
+    width: 320px;
+    margin: 30px auto 70px;
+}
+
+form > div {
+    margin-bottom: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px
+}
+
+form > div > input {
+    float: right;
+    width: 170px;
+    height: 19px;
+}
+
+form > span > input {
+    float: right;
+    width: 174px;
+    height: 23px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+select {
+    margin-left: 23px;
+    height: 18px;
+}
+
+table {
+    margin: 90px auto auto;
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+td, th {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+th {
+    text-align: left;
+    background: lightgray;
+}
+
+.hoverRow {
+    background-color: lightsteelblue;
+}
